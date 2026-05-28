@@ -1,0 +1,76 @@
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 100px;
+  align-items: center;
+  font-size: 4rem;
+}
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125;
+  margin-bottom: 30px;
+  position: relative;
+}
+.introducao h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center center;
+  top: -15px;
+  left: -45px;
+  z-index: -1;
+}
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+.perfil {
+  max-width: 100%;
+  display: block;
+}
+@media (max-width: 1200px){
+  .introducao h1 {
+    font-size: 3rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 2.5rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .introducao {
+    display: block;
+  }
+  .perfil {
+    display: none;
+  }
+  /* 3. Cria o espaço no topo do h1 para o detalhe verde não sumir */
+  .introducao h1 {
+    position: relative;
+    font-size: 2.2rem; 
+  }
+  /* 4. Posiciona o detalhe verde perfeitamente acima do "D" */
+  .introducao h1::before {
+    position: absolute;
+  }
+}
